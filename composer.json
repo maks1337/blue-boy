@@ -1,0 +1,17 @@
+{
+    "name": "maksr/blueboy",
+    "description": "PHP interpretation of Fallout 4 character mechanics",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Maksymilian Ratajczyk",
+            "email": "kontakt@maksymilianratajczyk.pl"
+        }
+    ],
+    "require": {
+        "nategood/commando": "*"
+    },
+    "autoload": {
+        "psr-4" : { "MaksR\\BlueBoy\\" : "src/MaksR/BlueBoy/" }
+    }
+}
