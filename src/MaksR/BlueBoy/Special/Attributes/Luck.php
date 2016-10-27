@@ -1,8 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: maslav
- */
 
 namespace MaksR\BlueBoy\Special\Attributes;
 
