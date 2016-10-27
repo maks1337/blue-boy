@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: maslav
- * Date: 06.10.2016
- * Time: 01:12
- */
 
 namespace MaksR\BlueBoy\Special\Attributes;
 
