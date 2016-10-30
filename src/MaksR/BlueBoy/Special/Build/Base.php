@@ -8,7 +8,7 @@ use MaksR\BlueBoy\Special\Attributes\{
 
 class Base
 {
-    const ATTRIBUTE_POINTS_AT_START = AttributeAbstract::POINT_UNIT * 21;
+    const ATTRIBUTE_POINTS_AT_START = AttributeAbstract::POINT_UNIT * 28;
     const ATTRIBUTE_MAX_ASSIGN_VALUE = AttributeAbstract::POINT_UNIT * 10;
 
     const AVAILABLE_ATTRIBUTES = [
@@ -30,7 +30,7 @@ class Base
         /*
          * Generate random build if there is no points provided
          * */
-        if ($initialPoints == false) {
+        if (empty($initialPoints)) {
             $initialPoints = $this->generateRandomBuild();
         }
 
@@ -64,9 +64,9 @@ class Base
      * Returns all attributes
      * @return array
      */
-    public function getAttributes(): \ArrayObject
+    public function getAttributes(): array
     {
-        return $this->attributes;
+        return $this->attributes->getArrayCopy();
     }
 
     /**
