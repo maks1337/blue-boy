@@ -2,6 +2,8 @@
 
 namespace MaksR\BlueBoy\Special\Attributes;
 
+use MaksR\BlueBoy\Exceptions\BlueBoyException;
+
 class AttributeFactory
 {
 
@@ -11,14 +13,12 @@ class AttributeFactory
         try {
             return new $attributeClassName();
         } catch (\Throwable $error) {
-            throw new \Exception(
-                vsprintf(
-                    "Cannot attach %s as attribute to a build \n%s",
-                    [
-                        $attribute,
-                        $error
-                    ]
-                )
+            throw new BlueBoyException(
+                "Cannot attach %s as attribute to a build \n%s",
+                [
+                    $attribute,
+                    $error
+                ]
             );
         }
     }

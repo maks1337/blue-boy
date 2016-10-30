@@ -2,7 +2,7 @@
 
 namespace MaksR\BlueBoy\Special\Attributes;
 
-use Colors\InvalidArgumentException;
+use MaksR\BlueBoy\Exceptions\BlueBoyException;
 
 abstract class AttributeAbstract
 {
@@ -22,7 +22,6 @@ abstract class AttributeAbstract
     /**
      * @param int $points
      * @return AttributeAbstract
-     * @throws InvalidArgumentException
      */
     public function setPoints(int $points): AttributeAbstract
     {
@@ -36,14 +35,15 @@ abstract class AttributeAbstract
      *
      * @param int $points
      * @return void
+     * @throws BlueBoyException
      */
     private function validatePoints(int $points): void
     {
         if ($this->points > $points) {
-            throw new InvalidArgumentException('Cannot set attribute points lower than they already are');
+            throw new BlueBoyException('Cannot set attribute points lower than they already are');
         }
         if ($points < 1) {
-            throw new InvalidArgumentException('Cannot set attribute points lower than 1');
+            throw new BlueBoyException('Cannot set attribute points lower than 1');
         }
     }
 

@@ -2,6 +2,7 @@
 
 namespace MaksR\BlueBoy\Special\Build;
 
+use MaksR\BlueBoy\Exceptions\BlueBoyException;
 use MaksR\BlueBoy\Special\Attributes\{
     AttributeAbstract, AttributeList, AttributeFactory
 };
@@ -82,7 +83,7 @@ class Base
     /**
      * Validates points for initial build
      * @param array $initialPoints
-     * @throws \Exception
+     * @throws BlueBoyException
      */
     private function initialPointsValidate(array $initialPoints): void
     {
@@ -92,19 +93,15 @@ class Base
             $initialPointsKeys
         );
         if (count($checkKeys) > 0) {
-            throw new \Exception(
-                vsprintf(
-                    "Missing points for attributes: %s",
-                    implode(", ", $checkKeys)
-                )
+            throw new BlueBoyException(
+                "Missing points for attributes: %s",
+                implode(", ", $checkKeys)
             );
         }
         if (array_sum($initialPoints) > self::ATTRIBUTE_POINTS_AT_START) {
-            throw new \Exception(
-                vsprintf(
-                    "Too many initial points for attributes: %s",
-                    array_sum($initialPoints)
-                )
+            throw new BlueBoyException(
+                "Too many initial points for attributes: %s",
+                array_sum($initialPoints)
             );
         }
     }

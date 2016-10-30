@@ -30,14 +30,12 @@ class BuildFactory
             );
         } catch (\Throwable $error) {
             throw new BuildException(
-                vsprintf(
-                    "CANNOT CREATE BUILD FROM TEMPLATE: %s %s %s",
-                    [
-                        $type,
-                        $subtype,
-                        $error
-                    ]
-                )
+                "CANNOT CREATE BUILD FROM TEMPLATE: %s %s %s",
+                [
+                    $type,
+                    $subtype,
+                    $error
+                ]
             );
         }
     }
@@ -57,12 +55,10 @@ class BuildFactory
             );
         } catch (\Throwable $error) {
             throw new BuildException(
-                vsprintf(
-                    "CANNOT CREATE BUILD FROM ATTRIBUTES: %s",
-                    [
-                        $error
-                    ]
-                )
+                "CANNOT CREATE BUILD FROM ATTRIBUTES: %s",
+                [
+                    $error
+                ]
             );
         }
     }

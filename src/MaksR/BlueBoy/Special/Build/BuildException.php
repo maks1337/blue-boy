@@ -2,7 +2,9 @@
 
 namespace MaksR\BlueBoy\Special\Build;
 
-class BuildException extends \Exception
+use MaksR\BlueBoy\Exceptions\BlueBoyException;
+
+class BuildException extends BlueBoyException
 {
 
 }

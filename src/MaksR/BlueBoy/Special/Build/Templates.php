@@ -86,11 +86,11 @@ class Templates
 
         if ($generatedAttributesCount !== $expectedAttributesCount) {
             throw new BuildException(
-                sprintf(
-                    "INVALID BUILD TEMPLATE: Expected %d attributes, got %d",
+                "INVALID BUILD TEMPLATE: Expected %d attributes, got %d",
+                [
                     $expectedAttributesCount,
                     $generatedAttributesCount
-                )
+                ]
             );
         }
 
