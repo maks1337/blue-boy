@@ -6,7 +6,7 @@ class Endurance extends AttributeAbstract implements AttributeInterface
 {
     const NAME = 'Endurance';
 
-    function _construct()
+    public function __construct()
     {
 
     }

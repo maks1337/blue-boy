@@ -7,7 +7,7 @@ class Charisma extends AttributeAbstract implements AttributeInterface
 
     const NAME = 'Charisma';
 
-    function _construct()
+    public function __construct()
     {
 
     }

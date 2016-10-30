@@ -6,7 +6,7 @@ class Agility extends AttributeAbstract implements AttributeInterface
 {
     const NAME = 'Agility';
 
-    function _construct()
+    public function __construct()
     {
 
     }

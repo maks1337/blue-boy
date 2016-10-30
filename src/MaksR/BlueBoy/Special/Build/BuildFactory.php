@@ -2,8 +2,6 @@
 
 namespace MaksR\BlueBoy\Special\Build;
 
-use MaksR\BlueBoy\Special\Build\Templates as Templates;
-
 class BuildFactory
 {
     /**

@@ -6,7 +6,7 @@ class Intelligence extends AttributeAbstract implements AttributeInterface
 {
     const NAME = 'Intelligence';
 
-    function _construct()
+    public function __construct()
     {
 
     }

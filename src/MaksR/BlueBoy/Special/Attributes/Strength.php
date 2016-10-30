@@ -6,7 +6,7 @@ class Strength extends AttributeAbstract implements AttributeInterface
 {
     const NAME = 'Strength';
 
-    function _construct()
+    public function __construct()
     {
 
     }

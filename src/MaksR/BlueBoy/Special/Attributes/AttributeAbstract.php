@@ -7,6 +7,7 @@ use Colors\InvalidArgumentException;
 abstract class AttributeAbstract
 {
     const POINT_UNIT = 1;
+    const NAME = null;
 
     private $points = self::POINT_UNIT;
 
@@ -58,6 +59,7 @@ abstract class AttributeAbstract
     /**
      * Increments points
      * @param int $incrementBy
+     * @return void
      */
     public function incrementPoints(int $incrementBy = 0): void
     {
@@ -65,5 +67,4 @@ abstract class AttributeAbstract
             $this->points + ($incrementBy >  0 ? $incrementBy: self::POINT_UNIT)
         );
     }
-
 }

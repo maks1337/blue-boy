@@ -6,7 +6,7 @@ class Perception extends AttributeAbstract implements AttributeInterface
 {
     const NAME = 'Perception';
 
-    function _construct()
+    public function __construct()
     {
 
     }

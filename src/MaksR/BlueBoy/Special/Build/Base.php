@@ -3,7 +3,7 @@
 namespace MaksR\BlueBoy\Special\Build;
 
 use MaksR\BlueBoy\Special\Attributes\{
-    AttributeAbstract, AttributeInterface, AttributeList, AttributeFactory
+    AttributeAbstract, AttributeList, AttributeFactory
 };
 
 class Base
@@ -21,6 +21,7 @@ class Base
         AttributeList::STRENGTH,
     ];
 
+    /* @var $attributes \ArrayObject */
     private $attributes;
 
     public function __construct(array $initialPoints = [])

@@ -2,7 +2,6 @@
 
 namespace MaksR\BlueBoy\Special\Attributes;
 
-
 class AttributeList
 {
     const AGILITY = 'Agility';
@@ -13,4 +12,3 @@ class AttributeList
     const PERCEPTION = 'Perception';
     const STRENGTH = 'Strength';
 }
-
