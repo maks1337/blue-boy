@@ -3,20 +3,31 @@
 namespace MaksR\BlueBoy\Special\Attributes;
 
 use MaksR\BlueBoy\Exceptions\BlueBoyException;
+use MaksR\BlueBoy\Special\Build\AttributeException;
 
 abstract class AttributeAbstract
 {
     const POINT_UNIT = 1;
-    const NAME = null;
 
     private $points = self::POINT_UNIT;
+
+    /**
+     * AttributeAbstract constructor.
+     * @throws AttributeException
+     */
+    public function __construct()
+    {
+        if (false === defined(static::NAME)) {
+            throw new AttributeException('NAME constant is not defined for ' . get_class($this));
+        }
+    }
 
     /**
      * @return mixed
      */
     public function getName()
     {
-        return self::NAME;
+        return static::NAME;
     }
 
     /**
